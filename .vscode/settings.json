@@ -1,0 +1,33 @@
+{
+    "files.exclude": {
+        "webpack.mix.js": false,
+        "server.php": false,
+        "README.md": false,
+        ".vscode": false,
+        "bootstrap": false,
+        "node_modules": false,
+        ".editorconfig": false,
+        ".env.example": false,
+        ".gitattributes": false,
+        ".gitignore": false,
+        ".styleci.yml": false,
+        "artisan": false,
+        "composer.json": false,
+        "composer.lock": false,
+        "package-lock.json": false,
+        "package.json": false,
+        "phpunit.xml": false,
+        "tests": false,
+        "public": false,
+        "resources": false,
+        "storage/framework": false,
+        "storage/logs": false,
+        "routes/channels.php": false,
+        "routes/console.php": false,
+        "routes/web.php": false,
+        "database/.gitignore": false,
+        "app/Console": false,
+        ".idea": false
+    },
+    "workspace.isHidden": false
+}

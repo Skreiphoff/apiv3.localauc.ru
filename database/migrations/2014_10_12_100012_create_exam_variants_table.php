@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateExamVariantsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('exam_variants', function (Blueprint $table) {
+            $table->foreignId('id_lab');
+            $table->foreignId('id_student');
+            $table->unsignedSmallInteger('variant');
+
+            $table->primary(['id_lab','id_student']);
+            $table->foreign('id_lab')->references('id_lab')->on('labs');
+            $table->foreign('id_student')->references('id_user')->on('users');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('exam_variants');
+    }
+}
